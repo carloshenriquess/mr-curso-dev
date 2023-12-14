@@ -2,7 +2,11 @@
   "name": "@mr-curso-dev/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev": "nx serve mr-curso-dev --open",
+    "format:check": "nx format:check",
+    "format": "nx format:write"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~17.0.0",

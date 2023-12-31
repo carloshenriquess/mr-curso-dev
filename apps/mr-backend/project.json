@@ -1,7 +1,7 @@
 {
-  "name": "mr-api",
+  "name": "mr-backend",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/mr-api/src",
+  "sourceRoot": "apps/mr-backend/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -10,12 +10,12 @@
       "defaultConfiguration": "production",
       "options": {
         "platform": "node",
-        "outputPath": "dist/apps/mr-api",
+        "outputPath": "dist/apps/mr-backend",
         "format": ["cjs"],
         "bundle": false,
-        "main": "apps/mr-api/src/main.ts",
-        "tsConfig": "apps/mr-api/tsconfig.app.json",
-        "assets": ["apps/mr-api/src/assets"],
+        "main": "apps/mr-backend/src/main.ts",
+        "tsConfig": "apps/mr-backend/tsconfig.app.json",
+        "assets": ["apps/mr-backend/src/assets"],
         "generatePackageJson": true,
         "esbuildOptions": {
           "sourcemap": true,
@@ -40,14 +40,14 @@
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "mr-api:build"
+        "buildTarget": "mr-backend:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "mr-api:build:development"
+          "buildTarget": "mr-backend:build:development"
         },
         "production": {
-          "buildTarget": "mr-api:build:production"
+          "buildTarget": "mr-backend:build:production"
         }
       }
     },
@@ -59,7 +59,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/mr-api/jest.config.ts"
+        "jestConfig": "apps/mr-backend/jest.config.ts"
       }
     }
   },

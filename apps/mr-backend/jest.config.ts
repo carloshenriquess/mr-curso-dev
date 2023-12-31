@@ -1,11 +1,11 @@
 /* eslint-disable */
 export default {
-  displayName: 'mr-api',
+  displayName: 'mr-backend',
   preset: '../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json' }],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/apps/mr-api',
+  coverageDirectory: '../../coverage/apps/mr-backend',
 };
